@@ -21,7 +21,6 @@ function shiftRight(array) {
   //Para rotar a la izquierda
   //const array3 = array.map((value, i, a) => a[(i + 1) % a.length]);
 
-
 }
 
 function onlyVowels(array) {
@@ -29,7 +28,6 @@ function onlyVowels(array) {
   const array2 = array.map((value) => value.replace(/[bcdfghjklmnñpqrstvwxyz]/gi, ''));  
   return array2;
   
-
 }
 
 function doubleMatrix(array) {
