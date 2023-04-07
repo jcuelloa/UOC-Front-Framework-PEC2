@@ -51,8 +51,6 @@ function allSameVowels(array) {
   });
   
   return array2;
-
-
 }
 
 module.exports = {
