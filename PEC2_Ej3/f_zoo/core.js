@@ -45,7 +45,51 @@ function entryCalculator(entrants) {
 }
 
 function schedule(dayName) {
-  // your code here
+  // your code her
+  
+  let horario = {};
+  //No argumentos de entrada
+  if (dayName === undefined){
+    console.log ("--->mostrar horario completo");
+    for (let x in data.hours){
+        if (data.hours[x].open === 0 && data.hours[x].close === 0){
+          //Cerrado
+          horario[x]='CLOSED';
+        }
+        else{
+          //Abierto. Mostrar horario
+          horario[x]=`Open from ${data.hours[x].open}am until ${data.hours[x].close-12}pm`;
+        }
+    }
+    
+  }
+  //Indicamos un día en la entrada
+  else{
+    //Buscamos la clave
+    for (let x in data.hours){
+
+      // console.log(x);
+      // console.log(data.hours[x]);
+      // console.log(data.hours[x].open);
+      // console.log(data.hours[x].close);
+      
+      if (x === dayName){
+        if (data.hours[x].open === 0 && data.hours[x].close === 0){
+          //Cerrado
+          horario[x]='CLOSED';
+        }
+        else{
+          //Abierto. Mostrar horario
+          horario[x]=`Open from ${data.hours[x].open}am until ${data.hours[x].close-12}pm`;
+        }
+      }
+    }
+    
+  }
+
+  //console.log(horario);
+  return horario;
+
 }
 
 function animalCount(species) {
