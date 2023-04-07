@@ -15,6 +15,8 @@ function multiplyBy10(array) {
 
 function shiftRight(array) {
   // your code here
+  // Este me ha costado bantante. He tomado ayuda de Internet
+  
   const array2 = array.map((value, i, a) => a[(i + a.length - 1) % a.length]);
   return array2;
 
