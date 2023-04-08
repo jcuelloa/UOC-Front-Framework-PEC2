@@ -30,7 +30,6 @@ function positiveRowsOnly(array) {
   });
   return array2;
 
-
 }
 
 function allSameVowels(array) {
