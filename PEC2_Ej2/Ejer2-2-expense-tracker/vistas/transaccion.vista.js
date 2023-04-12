@@ -31,15 +31,9 @@ class TransaccionVista {
         //Mostramos todas las transacciones
         transacciones.forEach((element) => (this.addTransactionDOM(element)));
 
-        // for (let i = 0; i < transacciones.length; i++) {
-        //     //console.log("transaccion " + i);
-        //     //console.log(transacciones[i]);
-        //     this.addTransactionDOM(transacciones[i]);
-        // }
-
         this.updateValues(transacciones);
 
-        //updateLocalStorage();
+        //updateLocalStorage();  //ESTO LO HAGO EN EL SERVICIO
 
     }
 
@@ -99,11 +93,6 @@ class TransaccionVista {
 
 
 
-    // _resetInput() {
-    //     this.text.value = "";
-    //     this.amount.value ="";
-    // }
-
     bindAddTransaccion(handler) {
         this.form.addEventListener("submit", event => {
             event.preventDefault();
@@ -114,7 +103,7 @@ class TransaccionVista {
                 handler(this.text.value, this.amount.value);
                 this.text.value = "";
                 this.amount.value = "";
-                //this._resetInput();
+
             }
 
         });
@@ -133,7 +122,6 @@ class TransaccionVista {
             }
         });
     }
-
 
 
 

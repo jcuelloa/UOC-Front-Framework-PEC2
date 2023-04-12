@@ -14,9 +14,7 @@ class TransaccionControlador {
     // Explicit this binding
     this.servicio.bindTransaccionListChanged(this.onTransaccionListChanged);
     this.vista.bindAddTransaccion(this.handleAddTransaccion);
-    // this.view.bindEditTodo(this.handleEditTodo);
     this.vista.bindDeleteTransaccion(this.handleDeleteTransaccion);
-    // this.view.bindToggleTodo(this.handleToggleTodo);
 
     // Display initial todos
     this.onTransaccionListChanged(this.servicio.transacciones);

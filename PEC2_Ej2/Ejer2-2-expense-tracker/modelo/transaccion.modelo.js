@@ -5,11 +5,6 @@
  *
  */
 class Transaccion {
-    // constructor({ texto, cantidad }) {
-    //     this.id = this.generateID();
-    //     this.texto = texto;
-    //     this.cantidad = cantidad;
-    // }
 
     constructor({ id, texto, cantidad }) {
         if (id === undefined) {

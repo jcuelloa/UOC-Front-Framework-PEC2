@@ -10,7 +10,7 @@ class TransaccionServicio {
         );
     }
 
-    //***** ESTA PARTA TE COMPRENDO PERO ES LA QUE VEO MÁS RARA 
+    //***** ESTA PARTE LA COMPRENDO PERO ES LA QUE VEO MÁS RARA 
     bindTransaccionListChanged(callback) {
         this.onTransaccionListChanged = callback;
     }
@@ -28,12 +28,9 @@ class TransaccionServicio {
     }
 
     deleteTransaccion(_id) {
-
         this.transacciones = this.transacciones.filter(transaccion =>
             transaccion.id !== +_id  //aquí _id es una cadena. Lo convierto a numero
         );
-        //this.transacciones = this.transacciones.filter(({ id }) => id !== _id);
-
         this._commit(this.transacciones);
     }
 
